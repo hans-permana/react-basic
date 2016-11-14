@@ -6,6 +6,7 @@ class Square extends React.Component {
         return (
             <button className="square">
                 {/* TODO */}
+
             </button>
         );
     }
