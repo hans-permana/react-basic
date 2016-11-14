@@ -1,6 +1,6 @@
 # React Basic
 
-This is a basic react structure that is meant to be used for a quick experimentation of new react concept.
+This is a basic react structure that is meant to be used for a quick experimentation of new react concept. Start from src/index.js.
 
 ## Running
 
