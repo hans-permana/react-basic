@@ -6,7 +6,9 @@ import ExpenseInput from './ExpenseInput';
 class App extends React.Component {
     render() {
         return (
-            <ExpenseInput name={this.props.name}/>
+            <div>
+                <ExpenseInput/>
+            </div>
         )
     }
 }
