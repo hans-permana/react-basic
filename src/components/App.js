@@ -1,10 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
 
+import ExpenseInput from './ExpenseInput';
+
 class App extends React.Component {
     render() {
         return (
-            <h1>Hello {this.props.name}</h1>
+            <ExpenseInput name={this.props.name}/>
         )
     }
 }
