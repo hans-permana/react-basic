@@ -1,12 +1,19 @@
 import React from 'react';
 
 class ExpenseList extends React.Component {
-    renderExpense(expense, i) {
+    constructor() {
+        super();
+        this.renderExpense = this.renderExpense.bind(this);
+    }
+
+    renderExpense() {
+        console.log(this.props);
         return (
-            <div key={i}>
-                <p>
+            <div>
+                {this.props.expenses.map((expense, i) => <p key={i}>
                     <strong>{expense.description}</strong> €{expense.amount} {expense.date}
-                </p>
+                    <button onClick={this.props.removeExpense.bind(null, i)}>X</button>
+                </p>)}
             </div>
         )
     }
@@ -14,7 +21,7 @@ class ExpenseList extends React.Component {
     render() {
         return (
             <div>
-                {this.props.expenses.map(this.renderExpense)}
+                {this.renderExpense()}
             </div>
         )
     }
