@@ -3,13 +3,6 @@ import React from 'react';
 import expenses from '../data/expenses';
 
 class ExpenseList extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            expenses: expenses
-        };
-    }
-
     renderExpense(expense, i) {
         return (
             <div key={i}>
@@ -23,7 +16,7 @@ class ExpenseList extends React.Component {
     render() {
         return (
             <div>
-                {this.state.expenses.map(this.renderExpense)}
+                {this.props.expenses.map(this.renderExpense)}
             </div>
         )
     }
