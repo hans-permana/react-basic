@@ -4,6 +4,11 @@ class ExpenseInput extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log("submitted", this.refs.description.value, this.refs.amount.value);
+        const newExpense = {
+            description: this.refs.description.value,
+            amount: this.refs.amount.value
+        };
+        this.props.addExpense(newExpense);
         this.refs.expenseForm.reset();
     }
 

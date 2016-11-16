@@ -1,7 +1,5 @@
 import React from 'react';
 
-import expenses from '../data/expenses';
-
 class ExpenseList extends React.Component {
     renderExpense(expense, i) {
         return (

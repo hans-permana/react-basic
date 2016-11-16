@@ -11,7 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <ExpenseInput/>
+                <ExpenseInput {...this.props}/>
                 <ExpenseList {...this.props}/>
             </div>
         )
