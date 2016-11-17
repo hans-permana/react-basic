@@ -7,7 +7,6 @@ class ExpenseList extends React.Component {
     }
 
     renderExpense() {
-        console.log(this.props);
         return (
             <div>
                 {this.props.expenses.map((expense, i) => <p key={i}>

@@ -4,12 +4,16 @@ import dateFormat from 'dateformat';
 class ExpenseInput extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
-        const newExpense = {
-            description: this.refs.description.value,
-            amount: this.refs.amount.value,
-            date: dateFormat(new Date(), "dd mmmm yyyy, HH:MM:ss")
-        };
-        this.props.addExpense(newExpense);
+        const description = this.refs.description.value;
+        const amount = this.refs.amount.value;
+        if (description && amount) {
+            const newExpense = {
+                description: description,
+                amount: amount,
+                date: dateFormat(new Date(), "dd mmmm yyyy, HH:MM:ss")
+            };
+            this.props.addExpense(newExpense);
+        }
         this.refs.description.focus();
         this.refs.expenseForm.reset();
     }
