@@ -21,15 +21,17 @@ class ExpenseInput extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)} ref="expenseForm">
-                <input type="text"
+                <input className="pt-input"
+                       type="text"
                        placeholder="Expense detail"
                        ref="description"
                 />
-                <input type="text"
+                <input className="pt-input"
+                       type="text"
                        placeholder="Amount"
                        ref="amount"
                 />
-                <button type="submit">+</button>
+                <button className="pt-button pt-icon-add" type="submit"/>
             </form>
         )
     }

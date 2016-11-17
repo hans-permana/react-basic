@@ -8,10 +8,10 @@ class ExpenseList extends React.Component {
 
     renderExpense() {
         return (
-            <div>
+            <div className="pt-running-text">
                 {this.props.expenses.map((expense, i) => <p key={i}>
                     <strong>{expense.description}</strong> €{expense.amount} {expense.date}
-                    <button onClick={this.props.removeExpense.bind(null, i)}>delete</button>
+                    <button className="pt-button pt-intent-danger pt-icon-delete" onClick={this.props.removeExpense.bind(null, i)}/>
                 </p>)}
             </div>
         )
