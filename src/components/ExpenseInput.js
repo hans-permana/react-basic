@@ -1,11 +1,13 @@
 import React from 'react';
+import dateFormat from 'dateformat';
 
 class ExpenseInput extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const newExpense = {
             description: this.refs.description.value,
-            amount: this.refs.amount.value
+            amount: this.refs.amount.value,
+            date: dateFormat(new Date(), "dd mmmm yyyy, HH:MM:ss")
         };
         this.props.addExpense(newExpense);
         this.refs.description.focus();
