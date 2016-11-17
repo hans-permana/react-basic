@@ -10,7 +10,7 @@ import * as actions from '../actions/expenseActions';
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className="pt-dark">
                 <ExpenseInput {...this.props}/>
                 <ExpenseList {...this.props}/>
             </div>
